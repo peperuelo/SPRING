@@ -1,0 +1,27 @@
+[0;1;32m●[0m postgresql-12.service - PostgreSQL 12 database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql-12.service; disabled; vendor preset: disabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2020-10-17 15:04:10 -05; 6h ago
+       Docs: https://www.postgresql.org/docs/12/static/
+   Main PID: 51043 (postmaster)
+      Tasks: 8 (limit: 6993)
+     Memory: 12.5M
+        CPU: 956ms
+     CGroup: /system.slice/postgresql-12.service
+             ├─51043 /usr/pgsql-12/bin/postmaster -D /var/lib/pgsql/12/data/
+             ├─51045 postgres: logger
+             ├─51047 postgres: checkpointer
+             ├─51048 postgres: background writer
+             ├─51049 postgres: walwriter
+             ├─51050 postgres: autovacuum launcher
+             ├─51051 postgres: stats collector
+             └─51052 postgres: logical replication launcher
+
+Oct 17 15:04:10 localhost.localdomain systemd[1]: Starting PostgreSQL 12 database server...
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.728 -05 [51043] LOG:  starting PostgreSQL 12.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 10.2.1 20200723 (Red Hat 10.2.1-1), 64-bit
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.729 -05 [51043] LOG:  listening on IPv6 address "::1", port 5432
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.729 -05 [51043] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.731 -05 [51043] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.732 -05 [51043] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.742 -05 [51043] LOG:  redirecting log output to logging collector process
+Oct 17 15:04:10 localhost.localdomain postmaster[51043]: 2020-10-17 15:04:10.742 -05 [51043] HINT:  Future log output will appear in directory "log".
+Oct 17 15:04:10 localhost.localdomain systemd[1]: Started PostgreSQL 12 database server.
