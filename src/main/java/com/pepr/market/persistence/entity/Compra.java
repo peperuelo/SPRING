@@ -6,7 +6,9 @@ import java.util.List;
 
 @Entity
 @Table(name="compras")
-public class Compra {
+public class
+
+Compra {
     @Id
     @Column(name= "id_compra")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,10 +27,11 @@ public class Compra {
     private String estado;
 
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name="id_cliente", insertable=false, updatable=false )
     private Cliente cliente;
 
-    @OneToMany(mappedBy= "producto")
+    @OneToMany(mappedBy= "producto", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
 
@@ -78,5 +81,21 @@ public class Compra {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
     }
 }
