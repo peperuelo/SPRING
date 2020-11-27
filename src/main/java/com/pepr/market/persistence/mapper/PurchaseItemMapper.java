@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-@Mapper (componentModel = "Spring", uses = {ProductMapper.class})
+@Mapper (componentModel = "spring", uses = {ProductMapper.class})
 public interface PurchaseItemMapper {
  @Mappings ({
     @Mapping(source = "id.idProducto", target = "productId" ),
