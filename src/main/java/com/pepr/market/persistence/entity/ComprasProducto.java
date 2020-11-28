@@ -10,7 +10,7 @@ public class ComprasProducto {
     private ComprasProductoPK id;
     private Integer cantidad;
     private Double total;
-    private boolean estado;
+    private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name="id_compra", insertable=false, updatable=false )
@@ -45,11 +45,11 @@ public class ComprasProducto {
         this.total = total;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 
