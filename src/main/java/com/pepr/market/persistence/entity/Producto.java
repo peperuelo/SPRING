@@ -19,7 +19,7 @@ public class Producto {
     private String codigoBarras;
 
 
-    @Column (name = "precioVenta")
+    @Column (name = "precio_venta")
     private Double precioVenta;
 
 
