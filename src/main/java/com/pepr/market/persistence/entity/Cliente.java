@@ -8,8 +8,7 @@ import java.util.List;
 
 public class Cliente {
     @Id
-    @Column(name= "id_cliente")
-    private Integer idCliente;
+    private String id;
     private String nombre;
     private String apellidos;
     private Integer celular;
@@ -22,12 +21,12 @@ public class Cliente {
     private List<Compra> compras;
 
 
-    public Integer getIdCliente() {
-        return idCliente;
+    public String getId() {
+        return id;
     }
 
-    public void setIdCliente(Integer idCliente) {
-        this.idCliente = idCliente;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

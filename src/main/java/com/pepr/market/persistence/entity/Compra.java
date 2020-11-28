@@ -6,12 +6,11 @@ import java.util.List;
 
 @Entity
 @Table(name="compras")
-public class
+public class Compra {
 
-Compra {
     @Id
-    @Column(name= "id_compra")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "id_compra")
     private Integer idCompra;
 
     @Column(name ="id_cliente")
@@ -27,11 +26,10 @@ Compra {
     private String estado;
 
     @ManyToOne
-    @MapsId("idCompra")
     @JoinColumn(name="id_cliente", insertable=false, updatable=false )
     private Cliente cliente;
 
-    @OneToMany(mappedBy= "producto", cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy= "compra", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
 
