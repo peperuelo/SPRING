@@ -1,7 +1,4 @@
 package com.pepr.market.web.controller;
-
-
-import com.pepr.market.domain.Product;
 import com.pepr.market.domain.Purchase;
 import com.pepr.market.domain.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
